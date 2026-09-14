@@ -18,7 +18,7 @@ Open `http://localhost:8000` in your browser.
 ## Assignment 2 - Week 2
 
 ### Deployed Project
-https://vercel.com/lilys-projects-d1cb9298/5025241204-pbkk-tugas-2
+https://5025241204-pbkk-tugas-2.vercel.app
 
 ### Running Locally
 
