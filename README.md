@@ -1,9 +1,9 @@
 # PBKK-B-5025241204
 
-# Assignment 1
-## Deployed Project
+## Assignment 1 - Week 1
+### Deployed Project
 https://pbkk-b-5025241204-h3j5-six.vercel.app
-## Running Locally
+### Running Locally
 
 ```bash
 cd PBKK_Tugas-1
@@ -15,12 +15,12 @@ php artisan serve
 
 Open `http://localhost:8000` in your browser.
 
-# Assignment 2
+## Assignment 2 - Week 2
 
-## Deployed Project
+### Deployed Project
 https://vercel.com/lilys-projects-d1cb9298/5025241204-pbkk-tugas-2
 
-## Running Locally
+### Running Locally
 
 ```bash
 cd PBKK_Tugas-2
