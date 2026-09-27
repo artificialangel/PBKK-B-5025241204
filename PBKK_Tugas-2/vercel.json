@@ -31,6 +31,10 @@
         "dest": "/public/apple-touch-icon.png"
     },
     {
+        "src": "/robots.txt",
+        "dest": "/public/robots.txt"
+    },
+    {
         "src": "/(.*)",
         "dest": "/api/index.php"
     }
