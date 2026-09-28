@@ -31,3 +31,17 @@ php artisan serve
 ```
 
 Open `http://localhost:8000` in your browser.
+
+## Assignment 3 - Week 4
+
+
+### Running Locally
+```bash
+cd PBKK_Tugas-3
+composer install
+cp .env.example .env
+php artisan key:generate
+php artisan serve
+```
+
+
