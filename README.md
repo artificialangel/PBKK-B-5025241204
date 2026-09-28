@@ -35,6 +35,7 @@ Open `http://localhost:8000` in your browser.
 ## Assignment 3 - Week 4
 
 ### Deployed Project
+
 https://pbkk-tugas-3-deploy-gbfvs33i9-lilys-projects-d1cb9298.vercel.app
 
 ### Running Locally
