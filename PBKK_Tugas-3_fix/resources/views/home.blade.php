@@ -6,6 +6,12 @@
 <section class="relative min-h-screen flex items-center overflow-hidden">
 
     <div class="relative z-10 max-w-7xl mx-auto w-full px-8 pt-24">
+        @if ($user)
+            <x-status-banner type="success" class="mb-4">
+                Selamat datang, {{ $user }}! 👋
+            </x-status-banner>
+        @endif        
+        
         <h1 class="mb-8 animate-typing overflow-hidden whitespace-nowrap border-r-3 border-r-black dark:border-r-white pr-5">
             Selamat Datang!
         </h1>

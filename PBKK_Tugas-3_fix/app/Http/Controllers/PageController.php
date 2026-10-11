@@ -1,17 +1,20 @@
 <?php
-
 namespace App\Http\Controllers;
+use Illuminate\Http\Request;
+
 
 class PageController
 {
-    // GET /
-    public function index()
+    // GET / and GET /beranda
+    public function index(Request $request)
     {
         $data = [
             'nama'  => 'Fathiya Nayla Husna Wibowo',
             'nrp'   => '5025241204',
             'kelas' => 'PBKK A',
             'kelompok' => '4',
+            // 'user'  => $request->query('user'), // Tantangan 2
+            'user'  => `Fathiya`
         ];
 
         return view('home', $data);

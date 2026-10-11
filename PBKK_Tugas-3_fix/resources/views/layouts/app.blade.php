@@ -1,6 +1,7 @@
-<!DOCTYPE html>
-
-<html lang="id" class="dark">
+@php
+    $queryMode = request()->query('mode');
+@endphp
+<html lang="id" class="{{ $queryMode === 'light' ? '' : 'dark' }}">
 
 <head>
     <meta charset="UTF-8">
@@ -32,15 +33,19 @@
         }
     </style>
 
-    <!-- Theme initialization -->
     <script>
-        const savedTheme = localStorage.getItem('theme');
+        const urlParams = new URLSearchParams(window.location.search);
+        const modeParam = urlParams.get('mode');
 
-        if (savedTheme === 'light') {
-            document.documentElement.classList.remove('dark');
-        } else {
-            document.documentElement.classList.add('dark');
+        if (!modeParam) {
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme === 'light') {
+                document.documentElement.classList.remove('dark');
+            } else {
+                document.documentElement.classList.add('dark');
+            }
         }
+        // If ?mode=... is present, Blade already set the correct class server-side — leave it.
     </script>
 
 </head>
@@ -63,14 +68,11 @@
                transition-colors duration-300
                bg-transparent"
     >
-
         <nav
             class="max-w-7xl mx-auto
                    flex items-center justify-between
                    px-4 sm:px-8 py-4 sm:py-6"
         >
-
-            <!-- Logo -->
             <a
                 href="{{ route('home') }}"
                 class="font-serif text-base sm:text-xl font-semibold
@@ -83,7 +85,6 @@
 
             <div class="flex items-center gap-3 sm:gap-10 text-xs sm:text-sm">
 
-                <!-- Home -->
                 <a
                     href="{{ route('home') }}"
                     class="nav-link
@@ -235,27 +236,15 @@
         updateThemeIcon();
 
 
-        // Toggle theme
         themeToggle.addEventListener('click', () => {
-
             if (html.classList.contains('dark')) {
-
-                // DARK → LIGHT
                 html.classList.remove('dark');
-
                 localStorage.setItem('theme', 'light');
-
             } else {
-
-                // LIGHT → DARK
                 html.classList.add('dark');
-
                 localStorage.setItem('theme', 'dark');
-
             }
-
             updateThemeIcon();
-
         });
 
     </script>
