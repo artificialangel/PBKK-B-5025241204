@@ -50,10 +50,6 @@ php artisan serve
 
 ## Assignment Week 10
 
-# Portal Akademik PBKK — Week 10: Dashboard & RBAC
-
-Proyek Laravel (PBKK Kelompok 4). Fitur publik dari minggu-minggu sebelumnya (Home, About, Calculator, Agent, Hitung IPK, profil mahasiswa) **tetap utuh**. Pada Week 10 ditambahkan **backoffice admin** dengan autentikasi dan pembatasan akses berbasis peran (RBAC).
-
 ## Ringkasan Perubahan Week 10
 
 | Area | Perubahan |
