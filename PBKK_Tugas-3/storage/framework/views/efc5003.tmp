@@ -1,0 +1,19 @@
+<?php $__env->startSection('title', 'Halaman Tidak Ditemukan'); ?>
+
+<?php $__env->startSection('content'); ?>
+<section class="relative min-h-screen flex items-center justify-center px-6 text-center overflow-hidden">
+
+    <div class="relative z-10">
+        <h1 class="text-2xl">404</h1>
+        <h1 class="text-2xl">Halaman Tidak Ditemukan</h1>
+        <p class="mb-8 max-w-md mx-h-md">
+            URL yang kamu tuju tidak cocok dengan rute manapun.
+        </p>
+        <a href="<?php echo e(route('home')); ?>"
+           class="inline-block bg-white text-blue-900 font-semibold rounded-full px-6 py-3 text-sm hover:bg-gray-100 transition">
+            Kembali ke Home
+        </a>
+    </div>
+</section>
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layouts.app', array_diff_key(get_defined_vars(), ['__data' => 1, '__path' => 1]))->render(); ?><?php /**PATH C:\Users\naaiy\Documents\SMT05\Project\PBKK\PBKK-B-5025241204\PBKK_Tugas-3\resources\views/errors/custom-404.blade.php ENDPATH**/ ?>
