@@ -50,7 +50,7 @@ php artisan serve
 
 ## Assignment Week 10
 
-## Ringkasan Perubahan Week 10
+### Ringkasan Perubahan Week 10
 
 | Area | Perubahan |
 |------|-----------|
@@ -64,7 +64,7 @@ php artisan serve
 | Seeder | Role, permission, akun demo admin/staf, dan data dummy Faker (aman dijalankan berulang) |
 | Pengujian | 6 tes Pest untuk akses dan RBAC |
 
-## Daftar File yang Ditambah / Diubah
+### Daftar File yang Ditambah / Diubah
 
 **Ditambah**
 
@@ -99,7 +99,7 @@ php artisan serve
 | `resources/views/components/text-input`, `input-label`, `primary-button` | Gaya form sesuai tema |
 | `README.md` | Dokumen ini |
 
-## Instalasi
+### Instalasi
 
 Prasyarat: PHP ≥ 8.2 (ekstensi `sqlite3`, `pdo_sqlite`, `mbstring`, `xml`, `curl`), Composer, Node.js + npm.
 
@@ -128,14 +128,14 @@ Buka `http://localhost:8000`. File `.env` dan folder `vendor/` **tidak** di-comm
 > `php artisan adminlte:install`. Breeze menimpa `routes/web.php` dan `layouts/app.blade.php`,
 > jadi backup dulu file tersebut (lihat `setup-rbac.sh`).
 
-## Akun Demo
+### Akun Demo
 
 | Role | Email | Password |
 |------|-------|----------|
 | Admin | `admin@example.com` | `password` |
 | Staf | `staf@example.com` | `password` |
 
-## URL Penting
+### URL Penting
 
 | URL | Keterangan |
 |-----|-----------|
@@ -145,7 +145,7 @@ Buka `http://localhost:8000`. File `.env` dan folder `vendor/` **tidak** di-comm
 
 Semua `/admin/*` wajib login. Guest diarahkan ke `/login`.
 
-## Role & Permission
+### Role & Permission
 
 Dikelola Spatie (database-backed), dibuat oleh `RolePermissionSeeder`.
 
@@ -165,7 +165,7 @@ Dikelola Spatie (database-backed), dibuat oleh `RolePermissionSeeder`.
 1. **Blade** — tombol Hapus dibungkus `@can('delete-data')`, tidak dirender untuk staf.
 2. **Server** — `DELETE /admin/mahasiswa/{id}` memakai `permission:delete-data`. Staf yang mengirim request manual mendapat **403**.
 
-## Dashboard
+### Dashboard
 
 Empat widget statistik dinamis (bukan angka hardcode):
 
@@ -176,21 +176,21 @@ Empat widget statistik dinamis (bukan angka hardcode):
 
 Ditambah tabel 5 mahasiswa terbaru.
 
-## Pencarian & Pagination
+### Pencarian & Pagination
 
 `/admin/mahasiswa` mencari berdasarkan nama, NRP, atau prodi (`->when($request->search, ...)`) dan memfilter angkatan. Pagination 10 data per halaman dengan `->paginate(10)->withQueryString()`, sehingga kata kunci dan filter tetap terbawa saat pindah halaman.
 
-## Alur Login
+### Alur Login
 
 1. Guest membuka **Login** di navbar publik → `/login`.
 2. Setelah login, Breeze mengarahkan ke `/dashboard`, lalu diteruskan ke `/admin/dashboard`.
 3. Saat login, navbar publik menampilkan **Dashboard** (hanya jika punya `view-dashboard`) dan **Logout** (form `POST` dengan CSRF).
 
-## Seeder
+### Seeder
 
 `php artisan migrate --seed` aman dijalankan berulang: role dan user memakai `firstOrCreate`, dan data dummy Faker tidak menumpuk (hanya ditambah jika tabel masih < 30 baris). Untuk mengulang dari awal: `php artisan migrate:fresh --seed`.
 
-## Pengujian
+### Pengujian
 
 ```powershell
 php artisan test
@@ -198,7 +198,7 @@ php artisan test
 
 Tes mencakup: guest dialihkan ke login, staf dapat membuka dashboard, staf tidak dapat menghapus (403), admin dapat menghapus, tombol Hapus tidak tampil untuk staf, dan pagination mempertahankan filter pencarian.
 
-## Pemecahan Masalah
+### Pemecahan Masalah
 
 | Gejala | Penyebab / solusi |
 |--------|-------------------|
